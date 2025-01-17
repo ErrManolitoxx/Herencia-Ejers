@@ -1,6 +1,7 @@
 package org.ies.vehicles;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Car extends Vehicles{
     private int numDoors;
@@ -57,5 +58,8 @@ public class Car extends Vehicles{
         System.out.println("Kilómetros realizados con el coche: " + totalKm + " Matrícula: " + plate + " Número de puertas: " + numDoors + " Potencia en caballos: " + horsePower);
     }
 
-
+    @Override
+    public void move(int distance) {
+        super.move(distance);
+    }
 }

@@ -1,6 +1,7 @@
 package org.ies.vehicles;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public abstract class Vehicles {
     protected int totalKm;
@@ -41,5 +42,9 @@ public abstract class Vehicles {
     }
 
     public abstract void showInfo();
-    public abstract void move();
+
+    public void move(int distance) {
+        distance += totalKm;
+        System.out.println("Usted ha recorrido " + distance + " km más, en total " + totalKm);
+    }
 }

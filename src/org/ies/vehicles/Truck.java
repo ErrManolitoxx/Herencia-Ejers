@@ -1,6 +1,7 @@
 package org.ies.vehicles;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Truck extends Vehicles{
     private int numEjes;
@@ -44,5 +45,10 @@ public class Truck extends Vehicles{
     @Override
     public void showInfo() {
         System.out.println("Kilómetros realizados con el camión: " + totalKm + " Matrícula: " + plate + " Número de ejes: " + numEjes);
+    }
+
+    @Override
+    public void move(int distance) {
+        super.move(distance);
     }
 }

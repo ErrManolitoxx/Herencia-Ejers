@@ -1,6 +1,7 @@
 package org.ies.vehicles;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class MotorCycle extends Vehicles{
 
@@ -45,5 +46,10 @@ public class MotorCycle extends Vehicles{
     @Override
     public void showInfo() {
         System.out.println("Kilómetros realizados con la moto: " + totalKm + " Matrícula: " + plate + " Cilindrada de la moto: " + cc);
+    }
+
+    @Override
+    public void move(int distance) {
+        super.move(distance);
     }
 }
