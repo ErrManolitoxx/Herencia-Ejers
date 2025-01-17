@@ -2,6 +2,7 @@ package org.ies.employees;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Programer extends Employee{
 
@@ -16,10 +17,17 @@ public class Programer extends Employee{
 
     @Override
     public void showInfo() {
-        System.out.println("El NIF del programador es " + nif + " se llama " + name + " de apellidos " + surname + " con " + totalHours + " horas de trabajo ");
+        System.out.println("El NIF del programador es " + nif + " se llama " + name + " de apellidos " + surname + " con " + totalHours + " horas de trabajo, trabaja en el proyecto " + project + "y conoce los lenguajes de programación " + languagePro);
     }
 
+    public boolean languageProgrammer(Scanner scanner) {
+        String lenguaje = scanner.nextLine();
 
+        if (languagePro.equals(lenguaje)) {
+            return true;
+        }
+        return false;
+    }
 
     public String[] getLanguagePro() {
         return languagePro;

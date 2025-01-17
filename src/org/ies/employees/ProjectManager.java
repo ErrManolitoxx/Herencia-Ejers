@@ -2,6 +2,7 @@ package org.ies.employees;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class ProjectManager extends Employee{
 
@@ -14,6 +15,15 @@ public class ProjectManager extends Employee{
     @Override
     public void showInfo() {
         System.out.println("El NIF del jefe de proyectos es " + nif + " se llama " + name + " de apellidos " + surname + " con " + totalHours + " horas trabajadas");
+    }
+
+    public boolean projectManager(Scanner scanner) {
+        String project = scanner.nextLine();
+
+        if (project.equals(projects)) {
+            return true;
+        }
+        return false;
     }
 
     public String[] getProjects() {
