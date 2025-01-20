@@ -12,8 +12,18 @@ public class ProductManager extends Employee{
     }
 
     @Override
-    public void showInfo() {
-        System.out.println("El NIF del product manager es " + nif + " se llama " + name + " de apellidos " + surname + " con " + totalHours + " horas trabajadas " + " y se encuentra en el proyecto " + project);
+    public String employeeInfo() {
+        return " con nif " + nif + " de nombre " + name + " con apellidos" + surname + " con " + totalHours + " horas trabajadas " + specificFields();
+    }
+
+    @Override
+    public String specificFields() {
+        return " y se encuentra en el proyecto " + project;
+    }
+
+    @Override
+    public void moreHours(int hours) {
+        super.moreHours(hours);
     }
 
     public String getProject() {

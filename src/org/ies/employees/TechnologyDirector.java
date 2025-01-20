@@ -6,9 +6,21 @@ public class TechnologyDirector extends Employee{
         super(nif, name, surname, totalHours);
     }
 
+
+
     @Override
-    public void showInfo() {
-        System.out.println("El director de tecnología tiene el NIF " + nif + " se llama " + name + " de apellidos " + surname + " y con " + totalHours + " horas trabajadas.");
+    public String employeeInfo() {
+        return " con nif " + nif + " de nombre " + name + " con apellidos" + surname + " con " + totalHours + " horas trabajadas " + specificFields();
+    }
+
+    @Override
+    public String specificFields() {
+        return "";
+    }
+
+    @Override
+    public void moreHours(int hours) {
+        super.moreHours(hours);
     }
 
     @Override

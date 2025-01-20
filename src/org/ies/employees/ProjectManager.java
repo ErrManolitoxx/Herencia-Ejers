@@ -8,13 +8,19 @@ public class ProjectManager extends Employee{
 
     private String[] projects;
 
-    public ProjectManager(String nif, String name, String surname, int totalHours) {
+    public ProjectManager(String nif, String name, String surname, int totalHours, String[] strings) {
         super(nif, name, surname, totalHours);
     }
 
+
     @Override
-    public void showInfo() {
-        System.out.println("El NIF del jefe de proyectos es " + nif + " se llama " + name + " de apellidos " + surname + " con " + totalHours + " horas trabajadas");
+    public String employeeInfo() {
+        return " con nif " + nif + " de nombre " + name + " con apellidos" + surname + " con " + totalHours + " horas trabajadas " + specificFields();
+    }
+
+    @Override
+    public String specificFields() {
+        return " trabaja en los proyectos de " + projects ;
     }
 
     public boolean projectManager(Scanner scanner) {
@@ -24,6 +30,11 @@ public class ProjectManager extends Employee{
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void moreHours(int hours) {
+        super.moreHours(hours);
     }
 
     public String[] getProjects() {

@@ -15,9 +15,16 @@ public class Programer extends Employee{
         this.project = project;
     }
 
+
+
     @Override
-    public void showInfo() {
-        System.out.println("El NIF del programador es " + nif + " se llama " + name + " de apellidos " + surname + " con " + totalHours + " horas de trabajo, trabaja en el proyecto " + project + "y conoce los lenguajes de programación " + languagePro);
+    public String employeeInfo() {
+        return " con nif " + nif + " de nombre " + name + " con apellidos" + surname + " con " + totalHours + " horas trabajadas " + specificFields();
+    }
+
+    @Override
+    public String specificFields() {
+        return " trabaja en los proyectos de " + project + " y conoce los lenguajes de programación " + languagePro;
     }
 
     public boolean languageProgrammer(Scanner scanner) {
@@ -27,6 +34,11 @@ public class Programer extends Employee{
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void moreHours(int hours) {
+        super.moreHours(hours);
     }
 
     public String[] getLanguagePro() {

@@ -15,8 +15,14 @@ public abstract class Employee {
         this.surname = surname;
         this.totalHours = totalHours;
     }
+    public void info(){
+        System.out.println("Empleado " + employeeInfo() + specificFields());
+    }
 
-    public abstract void showInfo();
+    public abstract String employeeInfo();
+    public abstract String specificFields();
+
+
     public void moreHours(int hours) {
         hours += totalHours;
         System.out.println("Usted ha trabajado " + hours + " extras");
