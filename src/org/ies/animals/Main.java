@@ -1,11 +1,30 @@
 package org.ies.animals;
 
+import org.ies.animals.components.AnimalReader;
+import org.ies.animals.components.CatReader;
+import org.ies.animals.components.DogReader;
+import org.ies.animals.components.PigReader;
+import org.ies.animals.model.Cat;
+import org.ies.animals.model.Dog;
+import org.ies.animals.model.Pig;
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-       var cat = new Cat(1, "negro");
-       var dog = new Dog(4, "Chucho");
-       var pig = new Pig(5, "Almendras");
+       var scanner = new Scanner(System.in);
+       var dogreader = new DogReader(scanner);
+       var catreader = new CatReader(scanner);
+       var pigreader = new PigReader(scanner);
+       var animalReader= new AnimalReader(
+               scanner,
+               dogreader,
+               catreader,
+               pigreader
+       );
 
-       cat.showInfo();
+       var animal = animalReader.read();
+
+       animal.showInfo();
     }
 }

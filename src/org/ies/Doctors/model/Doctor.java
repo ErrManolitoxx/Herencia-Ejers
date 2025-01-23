@@ -22,7 +22,6 @@ public abstract class Doctor {
 
     public abstract String doctorInfo();
     public abstract String specificFields();
-    public abstract boolean workingHospital();
 
     public String getName() {
         return name;
