@@ -1,5 +1,9 @@
 package org.ies.shapes;
 
+import org.ies.shapes.model.Circle;
+import org.ies.shapes.model.Square;
+import org.ies.shapes.model.TriangleRectangle;
+
 public class Main {
     public static void main(String[] args) {
         Square square = new Square("Azul", 4);

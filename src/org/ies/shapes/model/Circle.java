@@ -1,8 +1,8 @@
-package org.ies.shapes;
+package org.ies.shapes.model;
 
 import java.util.Objects;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
 
     private double radio;
 

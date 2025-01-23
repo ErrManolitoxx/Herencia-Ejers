@@ -1,4 +1,4 @@
-package org.ies.shapes;
+package org.ies.shapes.model;
 
 import java.util.Objects;
 
