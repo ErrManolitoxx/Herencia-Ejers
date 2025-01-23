@@ -1,9 +1,8 @@
-package org.ies.vehicles;
+package org.ies.vehicles.model;
 
 import java.util.Objects;
-import java.util.Scanner;
 
-public class Truck extends Vehicles{
+public class Truck extends Vehicles {
     private int numEjes;
 
     public Truck(int totalKm, String plate, int numEjes) {

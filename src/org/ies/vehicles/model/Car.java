@@ -1,9 +1,8 @@
-package org.ies.vehicles;
+package org.ies.vehicles.model;
 
 import java.util.Objects;
-import java.util.Scanner;
 
-public class Car extends Vehicles{
+public class Car extends Vehicles {
     private int numDoors;
     private int horsePower;
 

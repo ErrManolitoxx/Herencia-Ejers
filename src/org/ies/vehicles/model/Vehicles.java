@@ -1,7 +1,6 @@
-package org.ies.vehicles;
+package org.ies.vehicles.model;
 
 import java.util.Objects;
-import java.util.Scanner;
 
 public abstract class Vehicles {
     protected int totalKm;

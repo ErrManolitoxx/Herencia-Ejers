@@ -1,26 +1,26 @@
 package org.ies.vehicles;
 
+import org.ies.vehicles.components.CarReader;
+import org.ies.vehicles.components.MotorCycleReader;
+import org.ies.vehicles.components.TruckReader;
+import org.ies.vehicles.components.VehicleReader;
+import org.ies.vehicles.model.Car;
+import org.ies.vehicles.model.MotorCycle;
+import org.ies.vehicles.model.Truck;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car(90, "09798SVJ", 5, 230);
-        MotorCycle motorCycle = new MotorCycle(14798, "02179LYU", 1000);
-        Truck truck = new Truck(70214, "21709HNW", 4);
+        var scanner = new Scanner(System.in);
+        var carReader = new CarReader(scanner);
+        var motorCycleReader = new MotorCycleReader(scanner);
+        var truckReader = new TruckReader(scanner);
+        var vehicleReader = new VehicleReader(carReader, motorCycleReader, truckReader, scanner);
 
-        truck.move(500);
-        truck.showInfo();
+        var vehicle = vehicleReader.read();
 
-        car.move(80000);
-        car.showInfo();
-
-        motorCycle.move(4000);
-        motorCycle.showInfo();
-
-
-
-
-
+        vehicle.showInfo();
     }
 
 }
